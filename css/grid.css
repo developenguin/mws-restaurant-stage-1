@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* basic implementation of a responsive grid system */
+
+.col {
+
+}
+
+.
+
+/* Tablets, portrait */
+@media screen and (min-width: 768px) {
+
+}
+
+/* Tablets, landscape */
+@media screen and (min-width: 992px) {
+
+}
+
+/* Desktops, large screens */
+@media screen and (min-width: 1280px) {
+
+}
