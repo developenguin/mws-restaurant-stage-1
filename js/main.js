@@ -1,7 +1,8 @@
 let restaurants,
     neighborhoods,
-    cuisines,
-    map,
+    cuisines;
+
+var map,
     markers = [];
 
 /**
