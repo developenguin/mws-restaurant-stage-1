@@ -1,4 +1,4 @@
-let restaurant,
+var restaurant,
     map;
 
 /**
@@ -159,5 +159,5 @@ getParameterByName = (name, url) => {
     return null;
   if (!results[2])
     return '';
-  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  return parseInt(decodeURIComponent(results[2].replace(/\+/g, ' ')), 10);
 };
