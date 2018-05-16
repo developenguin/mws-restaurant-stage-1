@@ -192,12 +192,15 @@ nav h1 a {
 }
 .inside #map-container {
   background: blue none repeat scroll 0 0;
-  height: 87%;
+  /*height: 87%;*/
   /*position: fixed;*/
   /*right: 0;*/
   /*top: 80px;*/
-  width: 50%;
+  /*width: 50%;*/
+  width: 100%;
+  min-height: 384px;
 }
+
 .inside #map {
   background-color: #ccc;
   height: 100%;
