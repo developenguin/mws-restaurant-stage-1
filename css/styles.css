@@ -13,7 +13,8 @@ body,td,th,p{
 }
 body {
 	background-color: #fdfdfd;
-	margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
 	position: relative;
 }
 ul, li {
@@ -42,7 +43,6 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
 #maincontent {
   background-color: #f3f3f3;
   min-height: 100%;
-  max-width: 1280px;
 }
 #footer {
   background-color: #444;
