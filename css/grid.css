@@ -11,8 +11,6 @@
   width: 100%;
   max-width: 100%;
   flex-wrap: wrap;
-  margin-left: -15px;
-  margin-right: -15px;
 }
 
 [class^="col-"] {
