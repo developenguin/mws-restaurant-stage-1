@@ -5,12 +5,27 @@ var restaurants,
     markers = [];
 
 /**
- * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ * Register a service worker that caches assets
  */
-document.addEventListener('DOMContentLoaded', (event) => {
-  fetchNeighborhoods();
-  fetchCuisines();
-});
+registerServiceWorker = () => {
+
+  return new Promise((resolve, reject) => {
+
+    if (!navigator.serviceWorker) {
+      return;
+    }
+
+    navigator.serviceWorker.register('/ServiceWorker.js')
+      .then(() => {
+        resolve();
+      })
+      .catch(() => {
+        reject();
+      });
+
+  });
+
+};
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -180,3 +195,19 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 };
+
+/**
+ * Start executing
+ */
+registerServiceWorker()
+  .then(() => {
+
+    /**
+     * Fetch neighborhoods and cuisines as soon as the page is loaded.
+     */
+    document.addEventListener('DOMContentLoaded', (event) => {
+      fetchNeighborhoods();
+      fetchCuisines();
+    });
+
+  });
