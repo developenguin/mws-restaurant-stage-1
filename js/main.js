@@ -199,15 +199,12 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 /**
  * Start executing
  */
-registerServiceWorker()
-  .then(() => {
+registerServiceWorker();
 
-    /**
-     * Fetch neighborhoods and cuisines as soon as the page is loaded.
-     */
-    document.addEventListener('DOMContentLoaded', (event) => {
-      fetchNeighborhoods();
-      fetchCuisines();
-    });
-
-  });
+/**
+ * Fetch neighborhoods and cuisines as soon as the page is loaded.
+ */
+document.addEventListener('DOMContentLoaded', (event) => {
+  self.fetchNeighborhoods();
+  self.fetchCuisines();
+});
